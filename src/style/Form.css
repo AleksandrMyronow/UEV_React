@@ -1,0 +1,11 @@
+.form-field {
+    color: slategray;
+    font-size: 20px;
+}
+
+.form-field-input {
+    width: 200px;
+    height: 30px;
+    border: 2px solid slategray;
+    display: inline-block;
+}
