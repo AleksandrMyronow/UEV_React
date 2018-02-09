@@ -34,19 +34,19 @@ class Form extends Component {
 
     handleSurnameChange(e) {
         this.setState({
-            name: e.target.value
+            surname: e.target.value
         })
     }
 
     handleIdCodeChange(e) {
         this.setState({
-            name: e.target.value
+            id_code: e.target.value
         })
     }
 
     handlePassportPassChange(e) {
         this.setState({
-            name: e.target.value
+            passport_pass: e.target.value
         })
     }
 
@@ -58,13 +58,13 @@ class Form extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit} className="form-field">
-                <input type="text" value={this.state.passport_id} onChange={this.handlePassIdChange} className="form-field-input"/> Password ID
-                <input type="text" value={this.state.name} onChange={this.handleNameChange} className="form-field-input"/> Name
-                <input type="text" value={this.state.surname} onChange={this.handleSurnameChange} className="form-field-input"/> Surname
-                <input type="text" value={this.state.id_code} onChange={this.handleIdCodeChange} className="form-field-input"/> Identification code
-                <input type="text" value={this.state.passport_pass} onChange={this.handlePassportPassChange} className="form-field-input"/> Passport password
-                <button>Save</button>
-                <Link to="/">Home</Link>
+                <div className="form-field-div"><input type="text" value={this.state.passport_id} onChange={this.handlePassIdChange} className="form-field-input"/> Password ID</div>
+                <div className="form-field-div"><input type="text" value={this.state.name} onChange={this.handleNameChange} className="form-field-input"/> Name</div>
+                <div className="form-field-div"><input type="text" value={this.state.surname} onChange={this.handleSurnameChange} className="form-field-input"/> Surname</div>
+                <div className="form-field-div"><input type="text" value={this.state.id_code} onChange={this.handleIdCodeChange} className="form-field-input"/> Identification code</div>
+                <div className="form-field-div"><input type="password" value={this.state.passport_pass} onChange={this.handlePassportPassChange} className="form-field-input"/> Passport password</div>
+                <button className="form-field-btn">Ввойти</button>
+                <div className="form-field-div"><Link to="/">На главную</Link></div>
             </form>
         )
     }
